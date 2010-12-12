@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<registration>
+
+	<tool id="sakai.${artifactId}" title="${artifactId}"
+		description="A great description of your tool.">
+
+		<!-- types of sites this tool is allowed to be added to -->
+		<category name="course" />
+		<category name="project" />
+
+		<!-- ID of the help information -->
+		<configuration name="help.id" value="sakai.${artifactId}" />
+
+		<!-- functions required to show this tool in the left menu -->
+		<!--
+		<configuration name="functions.require" value="some.function" />
+		-->
+
+	</tool>
+
+	<!-- permissions/functions to register for this tool -->
+	<function name="some.function" />
+
+</registration>

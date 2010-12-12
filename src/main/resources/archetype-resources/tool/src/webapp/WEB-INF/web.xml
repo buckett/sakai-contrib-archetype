@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**********************************************************************************
+ * Licensed under the Educational Community License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.osedu.org/licenses/ECL-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ **********************************************************************************/
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<display-name>sakai-${artifactId}</display-name>
+	<description>Sakai Client Side Template Project</description>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:META-INF/server/wink-core-context.xml,
+			/WEB-INF/applicationContext.xml
+		</param-value>
+	</context-param>
+
+	<!-- Sakai request filter -->
+	<filter>
+		<filter-name>sakai.request</filter-name>
+		<filter-class>org.sakaiproject.util.RequestFilter</filter-class>
+		<!--
+		this must be set to false so that file uploads are NOT parsed by Sakai's
+		RequestFilter this means that the app needs to check the various
+		sakai.properties that set upload size etc, rather than relying on the Sakai
+		RequestFilter to do it.
+		-->
+		<init-param>
+			<param-name>upload.enabled</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>sakai.request</filter-name>
+		<servlet-name>sakai.${artifactId}</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	<!-- Sakai listeners -->
+	<listener>
+		<listener-class>org.sakaiproject.util.ToolListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.sakaiproject.util.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- REST servlet -->
+	<servlet>
+		<servlet-name>sakai.${artifactId}</servlet-name>
+		<servlet-class>org.apache.wink.server.internal.servlet.RestServlet</servlet-class>
+		<init-param>
+			<param-name>applicationConfigLocation</param-name>
+			<param-value>/WEB-INF/providers;/WEB-INF/resources</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sakai.${artifactId}</servlet-name>
+		<url-pattern>/sakai-${artifactId}/*</url-pattern>
+	</servlet-mapping>
+</web-app>
