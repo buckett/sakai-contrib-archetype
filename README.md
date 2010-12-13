@@ -21,9 +21,9 @@ Generate a project using this archetype and pass all parameters:
 		-DarchetypeArtifactId=cst-archetype \
 		-DarchetypeVersion=1.0-SNAPSHOT \
 		-DgroupId=cool.application \
-		-DartifactId=rad-project \
+		-DartifactId=radproject \
         -Dversion=1.0-SNAPSHOT \
-        -Dpackage=cool.application.rad-project
+        -Dpackage=cool.application.radproject
 
 Generate a project using this archetype and pass the minimum parameters:
 
