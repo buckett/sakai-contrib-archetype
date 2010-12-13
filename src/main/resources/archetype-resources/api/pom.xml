@@ -27,4 +27,11 @@
 	<properties>
 		<deploy.target>shared</deploy.target>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.sakaiproject.kernel</groupId>
+			<artifactId>sakai-kernel-api</artifactId>
+		</dependency>
+	</dependencies>
 </project>

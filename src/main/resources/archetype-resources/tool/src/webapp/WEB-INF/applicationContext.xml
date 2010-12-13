@@ -37,6 +37,6 @@
 	</bean>
 
 	<bean class="${package}.ExampleResource">
-		<property name="timestampLogic" ref="${package}.TimestampLogic" />
+		<property name="exampleLogic" ref="${package}.ExampleLogic" />
 	</bean>
 </beans>

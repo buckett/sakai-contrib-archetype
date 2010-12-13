@@ -20,7 +20,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>${artifactId}-pack</artifactId>
-	<name>Sakai Client Side Template Project Packaging</name>
+	<name>Sakai Client Side Template Project Component Packaging</name>
 	<url>http://www.sakaiproject.org</url>
 	<packaging>sakai-component</packaging>
 

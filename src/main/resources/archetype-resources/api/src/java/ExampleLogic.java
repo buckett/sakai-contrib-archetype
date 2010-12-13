@@ -14,6 +14,26 @@
  **********************************************************************************/
 package ${package};
 
-public interface TimestampLogic {
+import java.util.List;
+
+import org.sakaiproject.site.api.SitePage;
+
+/**
+ * Example logic component class.
+ */
+public interface ExampleLogic {
+	/**
+	 * Get the current time on the server.
+	 * 
+	 * @return Current time on the server.
+	 */
 	String getNow();
+
+	/**
+	 * Get the pages associated to the current site.
+	 * 
+	 * @return List of pages associated to the current site. Empty list (not
+	 *         null) if no pages are found.
+	 */
+	List<SitePage> getPages();
 }

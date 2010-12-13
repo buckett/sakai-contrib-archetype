@@ -61,17 +61,24 @@
 		<listener-class>org.sakaiproject.util.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- REST servlet -->
+	<!-- landing page servlet gives the portal a place to start -->
+	<!-- servlet name must match tool.id in tools xml file -->
 	<servlet>
 		<servlet-name>sakai.${artifactId}</servlet-name>
 		<servlet-class>org.apache.wink.server.internal.servlet.RestServlet</servlet-class>
-		<init-param>
-			<param-name>applicationConfigLocation</param-name>
-			<param-value>/WEB-INF/providers;/WEB-INF/resources</param-value>
-		</init-param>
 	</servlet>
+	<!-- Wink admin servlet -->
+	<servlet>
+		<servlet-name>restSdkAdmin</servlet-name>
+		<servlet-class>org.apache.wink.server.internal.servlet.AdminServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>sakai.${artifactId}</servlet-name>
 		<url-pattern>/sakai-${artifactId}/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>restSdkAdmin</servlet-name>
+		<url-pattern>/admin</url-pattern>
 	</servlet-mapping>
 </web-app>

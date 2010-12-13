@@ -26,12 +26,16 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>${groupId}</groupId>
+			<artifactId>${artifactId}-api</artifactId>
+		</dependency>
+		<dependency>
 			<artifactId>sakai-kernel-api</artifactId>
 			<groupId>org.sakaiproject.kernel</groupId>
 		</dependency>
 		<dependency>
-			<groupId>${groupId}</groupId>
-			<artifactId>${artifactId}-api</artifactId>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
 		</dependency>
 	</dependencies>
 </project>
