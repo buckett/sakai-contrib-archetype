@@ -19,7 +19,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 	
-	<bean id="carl.test.example.ExampleLogic" class="carl.test.example.ExampleLogicImpl" init-method="init">
+	<bean id="${package}.ExampleLogic" class="${package}.ExampleLogicImpl" init-method="init">
 		<property name="timeService" ref="org.sakaiproject.time.api.TimeService" />
 		<property name="toolManager" ref="org.sakaiproject.tool.api.ToolManager" />
 		<property name="siteService" ref="org.sakaiproject.site.api.SiteService" />
