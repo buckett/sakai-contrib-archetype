@@ -20,7 +20,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>${artifactId}-api</artifactId>
-	<name>Sakai Client Side Template Project API</name>
+	<name>Sakai Contrib Project API</name>
 	<url>http://www.sakaiproject.org</url>
 	<packaging>jar</packaging>
 
@@ -29,9 +29,5 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.sakaiproject.kernel</groupId>
-			<artifactId>sakai-kernel-api</artifactId>
-		</dependency>
 	</dependencies>
 </project>

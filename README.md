@@ -1,14 +1,10 @@
-Maven Archetype for Sakai Client Side Template Project
+Maven Archetype for Sakai Contrib Project
 ======================================================
-This project is the source to a Maven archetype for generating a Sakai 2.x project
-that uses client side templates to render JSON data from the server.
+This project is the source to a Maven archetype for generating a Sakai 2.x project.
 
-The server does not render HTML as traditional web frameworks do.  Using JAX-RS
-([Apache Wink][1]), the server generates JSON for the client to use in conjunction
-with an HTML template.
-
-Calls to the server are done using AJAX via [jQuery][2] and processing of templates
-are performed by [jQuery Tmpl][3].
+This is different to a standard Sakai project in that it doesn't depend on a parent POM
+but builds it's dependencies in the base pom, this is partly because the purepoms
+didn't exist for 2.6. This means it uses the standard maven layout is used.
 
 Usage
 -----
@@ -18,7 +14,7 @@ Generate a project using this archetype and pass all parameters:
 
     mvn archetype:generate \
         -DarchetypeGroupId=org.sakaiproject \
-        -DarchetypeArtifactId=cst-archetype \
+        -DarchetypeArtifactId=sakai-contrib-archetype \
         -DarchetypeVersion=1.0-SNAPSHOT \
         -DgroupId=cool.application \
         -DartifactId=radproject \
@@ -29,9 +25,6 @@ Generate a project using this archetype and pass the minimum parameters:
 
     mvn archetype:generate \
         -DarchetypeGroupId=org.sakaiproject \
-        -DarchetypeArtifactId=cst-archetype \
+        -DarchetypeArtifactId=sakai-contrib-archetype \
         -DarchetypeVersion=1.0-SNAPSHOT
 
-[1]: http://incubator.apache.org/wink/ "Apache Wink"
-[2]: http://jquery.com "jQuery"
-[3]: http://api.jquery.com/category/plugins/templates/ "jQuery Tmpl"

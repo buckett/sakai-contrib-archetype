@@ -19,14 +19,14 @@
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-	name="cst-archetype">
+	name="sakai-contrib-archetype">
 	<modules>
 		<!-- api module -->
 		<module dir="api">
 			<fileSets>
 				<!-- application sources -->
 				<fileSet filtered="true" packaged="true">
-					<directory>src/java</directory>
+					<directory>src/main/java</directory>
 				</fileSet>
 			</fileSets>
 		</module>
@@ -36,11 +36,11 @@
 			<fileSets>
 				<!-- application sources -->
 				<fileSet filtered="true" packaged="true">
-					<directory>src/java</directory>
+					<directory>src/main/java</directory>
 				</fileSet>
 				<!-- test sources -->
 				<fileSet filtered="true" packaged="true">
-					<directory>src/test</directory>
+					<directory>src/test/java</directory>
 				</fileSet>
 			</fileSets>
 		</module>
@@ -50,15 +50,15 @@
 			<fileSets>
 				<!-- application sources -->
 				<fileSet filtered="true" packaged="true">
-					<directory>src/java</directory>
+					<directory>src/main/java</directory>
 				</fileSet>
 				<!-- test sources -->
 				<fileSet filtered="true" packaged="true">
-					<directory>src/test</directory>
+					<directory>src/test/java</directory>
 				</fileSet>
 				<!-- webapp sources -->
 				<fileSet filtered="true">
-					<directory>src/webapp</directory>
+					<directory>src/main/webapp</directory>
 				</fileSet>
 			</fileSets>
 		</module>
@@ -73,12 +73,22 @@
 			</fileSets>
 		</module>
 
+		<!-- help module -->
+		<module dir="hbm">
+			<fileSets>
+				<!-- documentation sources -->
+				<fileSet filtered="true">
+					<directory>src/main</directory>
+				</fileSet>
+			</fileSets>
+		</module>
+
 		<!-- pack module -->
 		<module dir="pack">
 			<fileSets>
 				<!-- component configuration -->
 				<fileSet filtered="true">
-					<directory>src/webapp/WEB-INF</directory>
+					<directory>src/main/webapp/WEB-INF</directory>
 				</fileSet>
 			</fileSets>
 		</module>

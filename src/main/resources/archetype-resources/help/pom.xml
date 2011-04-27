@@ -20,7 +20,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>${artifactId}-help</artifactId>
-	<name>Sakai Client Side Template Project Help</name>
+	<name>Sakai Contrib Project Help</name>
 	<url>http://www.sakaiproject.org</url>
 	<packaging>jar</packaging>
 

@@ -20,7 +20,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>${artifactId}-pack</artifactId>
-	<name>Sakai Client Side Template Project Component Packaging</name>
+	<name>Sakai Contrib Project Component Packaging</name>
 	<url>http://www.sakaiproject.org</url>
 	<packaging>sakai-component</packaging>
 
@@ -33,7 +33,6 @@
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>${artifactId}-impl</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -20,7 +20,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>${artifactId}-impl</artifactId>
-	<name>Sakai Client Side Template Project Implementation</name>
+	<name>Sakai Contrib Project Implementation</name>
 	<url>http://www.sakaiproject.org</url>
 	<packaging>jar</packaging>
 

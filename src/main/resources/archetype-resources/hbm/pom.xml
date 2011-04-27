@@ -16,26 +16,27 @@
  */
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>${artifactId}-tool</artifactId>
-	<name>Sakai Contrib Project Tool</name>
-	<url>http://www.sakaiproject.org</url>
-	<packaging>war</packaging>
+  <artifactId>${artifactId}-hbm</artifactId>
+  <name>Sakai Contrib Project Hibernate</name>
+  <url>http://www.sakaiproject.org</url>
+  <packaging>jar</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>${groupId}</groupId>
-			<artifactId>${artifactId}-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.sakaiproject.kernel</groupId>
-			<artifactId>sakai-kernel-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>${groupId}</groupId>
+      <artifactId>${artifactId}-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+    </dependency>
+  </dependencies>
 </project>
